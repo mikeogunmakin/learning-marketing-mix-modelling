@@ -21,7 +21,7 @@ $$
 
 ### 🔍 Explanation of Variables
 
-- **`Y_t`**: Outcome variable at time `t`  
+- $$Y_t$$: Outcome variable at time `t`  
   _e.g. sales, conversions, or revenue_
 
 - **`β₀`**: Intercept term  
