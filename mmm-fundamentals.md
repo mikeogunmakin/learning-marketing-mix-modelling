@@ -34,7 +34,7 @@ $$
   _Usually includes adstock (to model lagged effects) and saturation (to model diminishing returns)_
 
 - $$βₘ$$: Coefficient for media variable $$m$$  
-  _Represents the effectiveness or contribution of media channel $$m$$ to the outcome_
+  _Represents the effectiveness or contribution of media channel m to the outcome_
 
 - $$Z_{t,c}$$: Control variable $$c$$ at time $$t$$  
   _e.g. seasonality, holidays, pricing changes, competitor activity_
