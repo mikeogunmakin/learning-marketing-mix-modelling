@@ -45,6 +45,26 @@ $$
 - $$ε_t$$: Error term  
   _Captures noise or unexplained variation in the outcome variable_
 
+
+## How are MMMs used in practice?
+
+### 1. To Measure Marketing ROI
+They help determine which channels drive results, and how much return each channel brings relative to spend.
+
+### 2. To Optimise Media Budgets
+MMMs inform budget allocation by identifying diminishing returns and optimal spend levels.
+
+### 3. To Understand Long-Term Effects
+Unlike some digital attribution models, MMMs can account for long-term brand effects, seasonality, and lagged responses.
+
+### 4. To Inform Strategic Planning
+By simulating “what-if” scenarios, MMMs allow teams to model the impact of different marketing strategies before implementing them.
+
+
+
 ---
 
 ## 📚 References
+
+- https://research.google/pubs/challenges-and-opportunities-in-media-mix-modeling/
+- 
