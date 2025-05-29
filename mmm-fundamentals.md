@@ -21,28 +21,28 @@ $$
 
 ### 🔍 Explanation of Variables
 
-- $$Y_t$$: Outcome variable at time `t`  
+- $$Y_t$$: Outcome variable at time $$t$$  
   _e.g. sales, conversions, or revenue_
 
-- **`β₀`**: Intercept term  
+- $$β₀$$: Intercept term  
   _The baseline level of the outcome when all inputs are zero_
 
-- **`X_{t,m}`**: Media variable `m` at time `t`  
+- $$X_{t,m}$$: Media variable $$m$$ at time $$t$$  
   _e.g. spend on TV, search, or social media_
 
-- **`f(X_{t,m})`**: Transformation function applied to media inputs  
+- $$f(X_{t,m})$$: Transformation function applied to media inputs  
   _Usually includes adstock (to model lagged effects) and saturation (to model diminishing returns)_
 
-- **`βₘ`**: Coefficient for media variable `m`  
+- $$βₘ$$: Coefficient for media variable `m`  
   _Represents the effectiveness or contribution of media channel `m` to the outcome_
 
-- **`Z_{t,c}`**: Control variable `c` at time `t`  
+- $$Z_{t,c}$$: Control variable `c` at time `t`  
   _e.g. seasonality, holidays, pricing changes, competitor activity_
 
-- **`β_c`**: Coefficient for control variable `c`  
+- $$β_c$$: Coefficient for control variable `c`  
   _Measures the impact of external or non-media factors_
 
-- **`ε_t`**: Error term  
+- $$ε_t$$: Error term  
   _Captures noise or unexplained variation in the outcome variable_
 
 ---
