@@ -59,7 +59,7 @@ By simulating “what-if” scenarios, MMMs allow teams to model the impact of d
 
 ### Example of MMM Outputs
 
-![Diagram](learning-marketing-mix-modelling\images\examples-of-MMM-outputs.png) 
+![Diagram](./images/examples-of-MMM-outputs.png) 
 
 
 
