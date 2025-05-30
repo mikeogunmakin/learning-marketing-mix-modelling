@@ -115,6 +115,13 @@ This selection bias must be accounted for to produce valid causal estimates. One
 
 A matching estimator estimates the causal effect of a treatment (e.g., running an ad) by comparing treated and untreated units (e.g., time periods) that are similar in observed characteristics (e.g., other ad channels, seasonal effects, economic indicators).
 
+> Side Note: Matching estimator — An intuitive explanation
+ Imagine you’re an analyst at a company that runs TV ads and you want to measure whether TV advertising increases sales. You have weekly sales data and know which weeks had TV ads (treated weeks) and which weeks didn’t (control weeks).
+ 
+ Instead of simply comparing all weeks with TV ads vs. all weeks without TV ads (which could be biased), the matching estimator finds control weeks that closely resemble treated weeks in terms of other factors that influence sales, such as: Digital ad spend (e.g., Facebook, YouTube, Google Ads), Seasonality (e.g., Black Friday, holiday periods), Pricing & promotions, etc.
+ 
+The matching estimator assumes that for every combination of control variables in the treated group there exists at least one matching observation in the control group. However this may not always be a valid assumption, for example in the case of correlated media variables. As the number of control variables increase, the number of possible combinations of different control values increases exponentially. In a typical MMM situation, where the number of data points is low, this assumption is nearly impossible to satisfy in order to use the matching estimator to provide the full range of ROAS estimates.
+
 > An example of the potential outcomes framework in practice is Causal Impact analysis, which attempts to estimate what would have happened in the absence of an intervention.
 
 ---
