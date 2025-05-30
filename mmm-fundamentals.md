@@ -103,17 +103,19 @@ Other barriers to adoption of randomized experiments include technical hurdles i
 
 ### Potential Outcome
 
-If advertisers can’t run randomized experiments at scale and are therefore reliant on historical data, then they might try to derive causal conclusions via the potential outcomes framework, also known as the Rubin causal model for causal inference.
+If advertisers can’t run randomized experiments at scale and are therefore reliant on historical data, they may turn to the potential outcomes framework, also known as the Rubin causal model, to draw causal conclusions.
 
-Suppose we want to estimate the ROAS of a single ad channel for an advertiser and the ad channel is either on or off during each time period _t_. The challenge is that only one potential outcome is observed for each time period. A naive estimate would be to compare sales in the periods when the ad channel was on, to sales in the periods when the ad channel was off.
+Suppose we want to estimate the ROAS (Return on Ad Spend) of a single ad channel for an advertiser, where the ad channel is either on or off during each time period t. The key challenge is that only one potential outcome is observed per time period — either the outcome with the ad on, or the outcome with the ad off, but never both.
 
-However, the naive estimate introduces selection bias because, due to the different time periods, many factors influencing ad spend — such as advertiser decisions, customer behaviour, or competitor actions — are not controlled and vary in degree of influence. If higher ad spend tends to coincide with periods of high demand, simply comparing sales across periods would overestimate the ad’s true impact.
+A naive approach would compare sales in periods when the ad channel was on to sales in periods when it was off. However, this introduces selection bias, because those periods may differ systematically for reasons unrelated to the ad itself — such as changes in customer behaviour, competitor actions, seasonality, or advertiser strategy.
 
-It is this selection bias that makes trying to answer causal questions with observational data one of the most demanding problems in applied statistics. This selection bias needs to be accounted for in order to produce a valid causal result. One way to control for selection bias is through the use of the matching estimator.
+If ad spend tends to increase during periods of naturally high demand, then simply comparing raw sales across periods would likely overestimate the ad's causal impact. This is a fundamental challenge in using observational data to answer causal questions.
 
-A matching estimator is a way to measure the causal effect of a treatment (e.g., running an ad) by comparing treated and untreated cases that are as similar as possible based on control variables (e.g., other ad channels, seasonality).
+This selection bias must be accounted for to produce valid causal estimates. One approach to mitigating selection bias is through matching estimators.
 
-> Example of Potential outcome in practice include Causal Impact Analysis
+A matching estimator estimates the causal effect of a treatment (e.g., running an ad) by comparing treated and untreated units (e.g., time periods) that are similar in observed characteristics (e.g., other ad channels, seasonal effects, economic indicators).
+
+> An example of the potential outcomes framework in practice is Causal Impact analysis, which attempts to estimate what would have happened in the absence of an intervention.
 
 ---
 
