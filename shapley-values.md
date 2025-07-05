@@ -45,6 +45,21 @@ it is important to know why the model is making predictions:
 - explanations -  shap can provide the basis for human friendly explanations you may be cautious about the prediction that a mushroom is edible and rightly so that prediction can have serious consequences shap can be used to provide an explanation and increase trust in the model's prediction
 - data exploration - a data set will contain all sorts of hidden patterns these include non-linear relationships and interactions Black Box models are really good at finding these patterns we can train a model on the data set and it will use these hidden relationships to make predictions when we interpret the model we learn what it is using to make those predictions sometimes we can learn something completely new in this way shap becomes a tool for data exploration and the knowledge we gain can go beyond the model for example building better model features for simple models like linear regression.
 
+## Maths behind Shapey Values
+
+- SHAP values explain how much each feature (or player) contributes to a machine learning prediction (or prize in a game). The math comes from Shapley values in cooperative game theory.
+
+Intuitive Example
+
+You and your friend win $10,000 in a Kaggle contest. You both want to split the prize fairly, but you think you contributed more (you used your GPU, after all!). You go back in time (with a time machine!) to simulate each of you competing alone.
+
+| Player(s)      | Result    | Prize (\$) |
+| -------------- | --------- | ---------- |
+| You + Friend   | 1st place | 10,000     |
+| You (alone)    | 2nd place | 7,500      |
+| Friend (alone) | 3rd place | 5,000      |
+| Nobody plays   | no result | 0          |
+
 
 ## Resources
 - https://www.youtube.com/watch?v=MQ6fFDwjuco&t=1s
