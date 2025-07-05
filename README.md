@@ -1,2 +1,4 @@
 # learning-marketing-mix-modelling
-Study notes from learning about Marketing Mix Models (MMM), and research into building a machine learning MMM.
+**Description**: Study notes from learning and researching about Marketing Mix Models (MMM) <br><br>
+**Aim**: Build a machine learning MMM to measure marketing effectiveness at current company.
+
