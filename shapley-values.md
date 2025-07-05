@@ -31,10 +31,22 @@ where:
 
 Generally, shap values tell us which features are most important to an individual prediction, but we can also combine or aggregate shap values from multiple predictions as well. There are plots that can be used to understand how model works as a whole.
 
+![Diagram](./images/shap-values-shap-plot-types.png)
+
+The example shows the following plots:
+
+- Top left - Force Plot:Visualises how individual feature contributions push the prediction above or below the base value.
+- Top Right - Mean SHAP Plot: Shows the average absolute contribution of each feature to the model's predictions.
+- Bottom left - Beeswarm Plot: Displays the distribution of SHAP values for each feature across all instances, including direction and magnitude.
+- Bottom Right - Dependence Plot: Shows how a feature’s value affects its SHAP value, revealing its marginal effect on the prediction.
+
+it is important to know why the model is making predictions:
+- debugging - shap allows you to take a closer look at incorrect predictions and understand which features have caused the error we can also find cases where the model. Also extend to instances 
+- explanations -  shap can provide the basis for human friendly explanations you may be cautious about the prediction that a mushroom is edible and rightly so that prediction can have serious consequences shap can be used to provide an explanation and increase trust in the model's prediction
+- data exploration - a data set will contain all sorts of hidden patterns these include non-linear relationships and interactions Black Box models are really good at finding these patterns we can train a model on the data set and it will use these hidden relationships to make predictions when we interpret the model we learn what it is using to make those predictions sometimes we can learn something completely new in this way shap becomes a tool for data exploration and the knowledge we gain can go beyond the model for example building better model features for simple models like linear regression.
 
 
-
-
-
+## Resources
+- https://www.youtube.com/watch?v=MQ6fFDwjuco&t=1s
 
   
