@@ -130,6 +130,12 @@ To compute SHAP values for each player:
 | {2}   | 5,000 | 5,000      | 0        | $1/6$  | 0.00         |
 | {1,2} | 7,500 | 10,000     | 2,500    | $2/6$  | 833.33       |
 
+Notes: The SHAP weight tells us how often a player (or feature) gets the chance to make their impact after a specific group has already joined. Imagine all the different ways a team could be formed — the weight is simply the chance that a player arrives right after a certain subset and adds their contribution.
+
+![Diagram](./images/shap-values-weights-intuition.png)
+
+imagine player 1 is the female in the red top. This image shows all 6 possible orderings of three players:
+
 
 ## Resources
 - https://www.youtube.com/watch?v=MQ6fFDwjuco&t=1s
