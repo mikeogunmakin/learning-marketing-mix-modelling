@@ -49,9 +49,10 @@ it is important to know why the model is making predictions:
 
 - SHAP values explain how much each feature (or player) contributes to a machine learning prediction (or prize in a game). The math comes from Shapley values in cooperative game theory.
 
-Intuitive Example
+**Intuitive Example 1:**
 
 You and your friend win $10,000 in a Kaggle contest. You both want to split the prize fairly, but you think you contributed more (you used your GPU, after all!). You go back in time (with a time machine!) to simulate each of you competing alone.
+
 
 | Player(s)      | Result    | Prize (\$) |
 | -------------- | --------- | ---------- |
@@ -60,8 +61,36 @@ You and your friend win $10,000 in a Kaggle contest. You both want to split the 
 | Friend (alone) | 3rd place | 5,000      |
 | Nobody plays   | no result | 0          |
 
+To split the prize fairly, we calculate how much each player adds when they join a team. This is their marginal contribution.
+
+Let’s start with you (Player 1):
+
+Joining when nobody is in the team:
+You alone → $7,500 → Marginal Contribution = $7,500
+
+Joining a team where your friend is already there:
+Friend alone = $5,000
+You + Friend = $10,000
+Contribution = $10,000 - $5,000 = $5,000
+
+Now take the average of your contributions across these situations:
+
+    Your SHAP value= (7,500 + 5,000) / 2 = $6,250
+
+Same for your friend (Player 2):
+
+Friend joins no one: $5,000
+
+Friend joins you: $10,000 - $7,500 = $2,500
+
+Average contribution of friend across these situation:
+
+    Friends SHAP value = (5,000 + 2,500) / 2 = $3,750
+
+NB: $6,250 + $3,750 = $10,000
 
 ## Resources
 - https://www.youtube.com/watch?v=MQ6fFDwjuco&t=1s
+- https://www.youtube.com/watch?v=UJeu29wq7d0&list=PLqDyyww9y-1SJgMw92x90qPYpHgahDLIK&index=4
 
   
