@@ -89,6 +89,48 @@ Average contribution of friend across these situation:
 
 NB: $6,250 + $3,750 = $10,000
 
+**Example 2: Extending to 3 players**
+You now have 3 players (say: Player 1, Player 2, Player 3), and together they win $10,000 in a Kaggle competition.
+
+| Coalition (S) | Players   | Value (\$) |
+| ------------- | --------- | ---------- |
+| Ø             | —         | 0          |
+| {1}           | Player 1  | 5,000      |
+| {2}           | Player 2  | 5,000      |
+| {3}           | Player 3  | 0          |
+| {1,2}         | 1 + 2     | 7,500      |
+| {1,3}         | 1 + 3     | 7,500      |
+| {2,3}         | 2 + 3     | 5,000      |
+| {1,2,3}       | 1 + 2 + 3 | 10,000     |
+
+To compute SHAP values for each player:
+
+**player 1**
+
+| S     | v(S)  | v(S ∪ {1}) | Marginal | Weight | Contribution |
+| ----- | ----- | ---------- | -------- | ------ | ------------ |
+| Ø     | 0     | 5,000      | 5,000    | $2/6$  | 1,666.67     |
+| {2}   | 5,000 | 7,500      | 2,500    | $1/6$  | 416.67       |
+| {3}   | 0     | 7,500      | 7,500    | $1/6$  | 1,250.00     |
+| {2,3} | 5,000 | 10,000     | 5,000    | $2/6$  | 1,666.67     |
+
+**player 2**
+| S     | v(S)  | v(S ∪ {3}) | Marginal | Weight | Contribution |
+| ----- | ----- | ---------- | -------- | ------ | ------------ |
+| Ø     | 0     | 0          | 0        | $2/6$  | 0.00         |
+| {1}   | 5,000 | 7,500      | 2,500    | $1/6$  | 416.67       |
+| {2}   | 5,000 | 5,000      | 0        | $1/6$  | 0.00         |
+| {1,2} | 7,500 | 10,000     | 2,500    | $2/6$  | 833.33       |
+
+**player 3**
+| S     | v(S)  | v(S ∪ {3}) | Marginal | Weight | Contribution |
+| ----- | ----- | ---------- | -------- | ------ | ------------ |
+| Ø     | 0     | 0          | 0        | $2/6$  | 0.00         |
+| {1}   | 5,000 | 7,500      | 2,500    | $1/6$  | 416.67       |
+| {2}   | 5,000 | 5,000      | 0        | $1/6$  | 0.00         |
+| {1,2} | 7,500 | 10,000     | 2,500    | $2/6$  | 833.33       |
+
+
 ## Resources
 - https://www.youtube.com/watch?v=MQ6fFDwjuco&t=1s
 - https://www.youtube.com/watch?v=UJeu29wq7d0&list=PLqDyyww9y-1SJgMw92x90qPYpHgahDLIK&index=4
