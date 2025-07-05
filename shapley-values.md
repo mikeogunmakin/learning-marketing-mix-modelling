@@ -22,6 +22,17 @@ where:
 
 Consider a classification problem that looks at predicting whethwe a mushroom is poisonous or edible. Shap values can be used to understand how each feature has changed the predicted probability that a mushroom is poisonous (true).  More specifically, we interpret the shap values in terms of log odds. 
 
+![Diagram](./images/shap-values-mushroom-example.png)
+
+where:
+- on the top right f(x) is the log odds the individual mushroom is poisonous at 1.367.
+- The average predicted log odds across all mushrooms is 0.263.
+- The odor of the specific mushroom has increased the predicted log offs by 0.89. In other words, the smell means its more likely we predit this mushroom is poisonous.
+
+Generally, shap values tell us which features are most important to an individual prediction, but we can also combine or aggregate shap values from multiple predictions as well. There are plots that can be used to understand how model works as a whole.
+
+
+
 
 
 
